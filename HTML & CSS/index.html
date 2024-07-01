@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIPERPUS - Tambah buku</title>
+    <style>
+        #container {
+            text-align: center;
+        }
+
+        #container .form-container {
+            display: inline-block;
+        }
+
+        #container form {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+
+        #container form .column {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+
+        #container form .column label {
+            margin: 10px;
+            text-align: right;
+        }
+
+        #container form .column input {
+            margin: 10px;
+            border: 2px solid black;
+        }
+
+        #container form .column .form-button {
+            margin-left: -50px;
+        }
+
+        #container form .column select {
+            margin-left: 10px;
+            margin-right: 10px;
+            border: 2px solid black;
+            background: linear-gradient(90deg, #ffffff 89%, #3f4747 11%);
+        }
+            
+    </style>
+</head>
+<body>
+    <div id="container" class="container">
+        <div class="form-container">
+            <h2>
+                Tambah Buku
+            </h2>
+            <form action="" method="post">
+                <div class="column">
+                    <label for="bTitle">Judul Buku</label>
+                    <label for="bISBN">ISBN</label>
+                    <label for="bCat">Kategori</label>
+                    <label for="bAuthor">Pengarang</label>
+                    <label for="bPublisher">Penerbit</label>
+                    <label for="bPublishYear">Tahun Terbit</label>
+                    <label for="bStock">Jumlah Buku Tersedia</label>
+                </div>
+                <div class="column">
+                    <input type="text" name="bTitle" id="bTitle">
+                    <input type="text" name="bISBN" id="bISBN">
+                    <select name="bCat" id="bCat">
+                        <option value="fiksi">Fiksi</option>
+                        <option value="horror">Horror</option>
+                        <option value="autobiografi">Autobiografi</option>
+                        <option value="scifi">Sci-Fi</option>
+                        <option value="komedi">Komedi</option>
+                    </select>
+                    <input type="text" name="bAuthor" id="bAuthor">
+                    <input type="text" name="bPublisher" id="bPublisher">
+                    <input type="number" name="bPublishYear" id="bPublishYear" min="1901" max="2155" style="width: 55px;">
+                    <input type="number" name="bStock" id="bStock" min="0" style="width: 55px;">
+                    <div class="form-button">
+                        <input type="submit" value="Simpan" style="background-color: yellowgreen;">
+                        <input type="reset" value="Batal" style="background-color: crimson;">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
